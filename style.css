@@ -1,11 +1,27 @@
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
+body {
+    text-align: center;
+    background-color: rgb(109, 110, 110);
+}
 
-  body {
+#container{
     background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    position: absolute;
+    margin: auto;
+    height: 800px;
+    width: 1200px;
+}
+
+#user-score, #ai-score{
+    color: white;
+    position: absolute;
+    top: 12px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#user-score{
+    left: 400px;
+}
+#ai-score{
+    left:800px
+}
