@@ -2,15 +2,31 @@ body {
     text-align: center;
     background-color: rgb(109, 110, 110);
 }
-
-#container{
+#pongTitle{
+    text-align: center;
+}
+#container {
     background: black;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
     height: 800px;
     width: 1200px;
 }
-
+#middleline {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 8px;              /* adjust to match the line's thickness */
+    height: 800px;             /* fills the container top to bottom */
+    background-image: url('icons8-vertical-line-100.png');
+    background-repeat: repeat-y;   /* repeats vertically */
+    background-size: 5px 5px;    /* width x height of ONE repeated tile */
+}
 #user-score, #ai-score{
     color: white;
     position: absolute;
