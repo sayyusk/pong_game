@@ -1,3 +1,3 @@
 # pong_game
-basic pong game
+basic pong game, unfinished
 :3
