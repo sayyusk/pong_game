@@ -1,43 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    text-align: center;
-    background-color: rgb(109, 110, 110);
-}
-#pongTitle{
-    text-align: center;
-}
-#container {
+    margin: 0;
     background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    height: 800px;
-    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+#container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #111;
+    border: 3px solid white;
+    overflow: hidden;
+}
+
+#user-score,
+#ai-score {
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+}
+
+#user-score {
+    left: 35%;
+}
+
+#ai-score {
+    right: 35%;
+}
+
 #middleline {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
-    width: 8px;              /* adjust to match the line's thickness */
-    height: 800px;             /* fills the container top to bottom */
-    background-image: url('icons8-vertical-line-100.png');
-    background-repeat: repeat-y;   /* repeats vertically */
-    background-size: 5px 5px;    /* width x height of ONE repeated tile */
-}
-#user-score, #ai-score{
-    color: white;
-    position: absolute;
-    top: 12px;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    border-left: 3px dashed white;
 }
 
-#user-score{
-    left: 400px;
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
 }
-#ai-score{
-    left:800px
+
+#ball img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#player1,
+#player2 {
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    background: white;
+    transform: translateY(-50%);
+}
+
+#player1 {
+    left: 20px;
+}
+
+#player2 {
+    right: 20px;
 }
